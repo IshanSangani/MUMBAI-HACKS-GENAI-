@@ -1,0 +1,9 @@
+Region,Product,Stock,Sales,Reorder_Level,Lead_Time_Days
+North,A,120,80,100,5
+South,B,100,95,80,7
+East,C,150,130,120,4
+West,D,130,110,100,6
+North,A,110,85,100,5
+South,B,90,85,80,7
+East,C,140,120,120,4
+West,D,120,105,100,6

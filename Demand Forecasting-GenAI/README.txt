@@ -1,0 +1,1 @@
+Go To test and Run app.py make sure you have required packages like groq for the llama api

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV - SaaS App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to custom CSS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #007bff; /* Navbar color */
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important; /* Navbar text color */
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #f8f9fa !important; /* Navbar hover color */
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card-deck .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #343a40; /* Dark header for cards */
+            color: white;
+        }
+
+        footer {
+            background-color: #343a40; /* Footer color */
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Data Insights</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Upload Your CSV Files</h1>
+        <p class="lead text-center">Get AI-driven insights and recommendations for your data.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
+            <div class="form-group">
+                <label for="file">Main Data File (CSV):</label>
+                <input type="file" class="form-control-file" name="file" accept=".csv" required>
+            </div>
+            <div class="form-group">
+                <label for="regional_file">Regional Data File (CSV):</label>
+                <input type="file" class="form-control-file" name="regional_file" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Upload and Get Recommendations</button>
+        </form>
+
+        <h2 class="mt-5 text-center">Pricing Plans</h2>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-header">Free Plan</div>
+                <div class="card-body">
+                    <h5 class="card-title">Basic Analysis</h5>
+                    <p class="card-text">Access to basic features and recommendations.</p>
+                    <a href="#" class="btn btn-secondary">Select</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Standard Plan</div>
+                <div class="card-body">
+                    <h5 class="card-title">Advanced Analysis</h5>
+                    <p class="card-text">Includes advanced recommendations and reports.</p>
+                    <a href="#" class="btn btn-primary">Select</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Premium Plan</div>
+                <div class="card-body">
+                    <h5 class="card-title">Full Access</h5>
+                    <p class="card-text">All features, priority support, and custom analysis.</p>
+                    <a href="#" class="btn btn-success">Select</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <p class="text-center">© 2024 Data Insights. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to show a loading animation when the form is submitted
+        $('#uploadForm').on('submit', function() {
+            $(this).find('button[type="submit"]').prop('disabled', true);
+            $(this).find('button[type="submit"]').text('Uploading...');
+        });
+    </script>
+</body>
+</html>

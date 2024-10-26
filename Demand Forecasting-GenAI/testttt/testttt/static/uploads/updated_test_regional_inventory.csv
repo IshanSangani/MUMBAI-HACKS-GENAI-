@@ -1,0 +1,13 @@
+Region,Month,Inventory Level,Sales,Predicted Demand
+North,January,1500,1200,1800
+North,February,1400,1100,1750
+North,March,1300,1000,1700
+South,January,1600,1300,1850
+South,February,1500,1200,1800
+South,March,1400,1100,1750
+East,January,1700,1400,1900
+East,February,1600,1300,1850
+East,March,1500,1200,1800
+West,January,1800,1500,1950
+West,February,1700,1400,1900
+West,March,1600,1300,1850
